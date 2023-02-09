@@ -10,14 +10,7 @@ screen = turtle.Screen()
 screen.bgcolor("black")
 screen.tracer(0)
 screen.listen()
-# x_axis = 0
-# for turtles in range(3):
-#     tom = turtle.Turtle(shape="square")
-#     tom.color("white")
-#     tom.penup()
-#     tom.goto((x_axis, 0))
-#     all_turtles.append(tom)
-#     x_axis -= 20
+
 
 snake = snake.Snake()
 food = food.Food()
@@ -46,11 +39,6 @@ while game_is_on:
         score.game_over()
 
     for turtles in snake.all_turtles[2:]:
-        # if turtles == snake.all_turtles[0] or turtles == snake.all_turtles[1]:
-        #     pass
-        # elif snake.all_turtles[0].distance(turtles) < 10:
-        #     game_is_on = False
-        #     score.game_over()
 
         if snake.all_turtles[0].distance(turtles) < 10:
             game_is_on = False
